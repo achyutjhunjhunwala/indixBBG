@@ -1,11 +1,21 @@
 'use strict';
 
 define([], function() {
-	return ['$scope','$routeParams','SearchService', function($scope,$routeParams,SearchService) {
+	return ['$scope','$routeParams','SearchService','RelatedDataService','$location', function($scope,$routeParams,SearchService,
+																				   RelatedDataService,$location) {
 		// You can access the scope of the controller from here
 		SearchService.fetch($routeParams.searchTerm).then(function(result){
 			$scope.result = result;
 		});
+		RelatedDataService.fetch().then(function(result){
+			$scope.relatedData = result;
+		})
+		$scope.searchPress=function($event){
+			if ($event.keyCode === 13) {
+				$location.path('/search/' +$scope.searchTerm);
+				//$scope.getResult = SearchService.fetch($scope.searchItems).getSearchResults;
+			}
+		};
 		$scope.searchTerm = $routeParams.searchTerm;
 		// because this has happened asynchroneusly we've missed
 		// Angular's initial call to $apply after the controller has been loaded

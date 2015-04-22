@@ -3,9 +3,9 @@
 define([
 	'angular',
 	'angularRoute',
-	'components/version/version'
+	'sanitize'
 ], function(angular) {
-	angular.module('myApp.search', ['ngRoute', 'myApp.version'])
+	angular.module('myApp.search', ['ngRoute', 'ngSanitize'])
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/search/:searchTerm', {
 			templateUrl: 'search/searchView.html',
@@ -13,13 +13,15 @@ define([
 		});
 	}])
 	// We can load the controller only when needed from an external file
-	.controller('searchCtrl', ['$scope', '$injector','$routeParams','SearchService', function($scope, $injector, $routeParams,SearchService) {
+	.controller('searchCtrl', ['$scope', '$injector','$routeParams','SearchService','RelatedDataService','$location',
+			function($scope, $injector, $routeParams,SearchService,RelatedDataService,$location) {
 		require(['search/searchCtrl'], function(ctrl2) {
 			// injector method takes an array of modules as the first argument
 			// if you want your controller to be able to use components from
 			// any of your other modules, make sure you include it together with 'ng'
 			// Furthermore we need to pass on the $scope as it's unique to this controller
-			$injector.invoke(ctrl2, this, {'$scope': $scope, '$routeParams':$routeParams,'SearchService':SearchService});
+			$injector.invoke(ctrl2, this, {'$scope': $scope, '$routeParams':$routeParams,'SearchService':SearchService,
+				'RelatedDataService':RelatedDataService,'$location':$location});
 		});
 	}]);
 });

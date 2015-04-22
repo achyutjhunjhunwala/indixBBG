@@ -21,11 +21,13 @@ require.config({
 		angular: 'bower_components/angular/angular',
 		angularRoute: 'bower_components/angular-route/angular-route',
 		angularMocks: 'bower_components/angular-mocks/angular-mocks',
-		text: 'bower_components/requirejs-text/text'
+		text: 'bower_components/requirejs-text/text',
+		sanitize: 'bower_components/angular-sanitize/angular-sanitize'
 	},
 	shim: {
 		'angular' : {'exports' : 'angular'},
 		'angularRoute': ['angular'],
+		'sanitize' : ['angular'],
 		'angularMocks': {
 			deps:['angular'],
 			'exports':'angular.mock'

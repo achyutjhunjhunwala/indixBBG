@@ -4,11 +4,11 @@
             <input class="searchBuck" type="text" ng-model="searchTerm" placeholder="Search" ng-keypress="searchPress($event)"/>
         </div>
     </section>
-    <section class="specialSearchContentWrap">
+    <section class="specialSearchContentWrap clearfix">
         <div class="specialContent">
             <div class="specialContentInnerWrap">
-                <div class="specialCotentImage">
-                    <img src="{{result.RelatedTopics[0].Icon.URL}}" alt="" class="scImage"/>
+                <div class="specialCotentImage" ng-if="result.RelatedTopics[0].Icon.URL">
+                    <img ng-src="{{result.RelatedTopics[0].Icon.URL}}" alt="" class="scImage"/>
                 </div>
                 <div class="specialContentText">
                     <h1>{{result.Heading}}</h1>
@@ -35,10 +35,21 @@
             </div>
         </div>
         <div class="relatedTopics">
-
+            <div class="relatedTopicContent">
+                <div class="relatedInfo" ng-repeat="data in relatedData">
+                    <span class="relatedInfoLabel" ng-bind="data.label"></span>
+                    <span class="relatedInfoValue" ng-bind="data.value"></span>
+                </div>
+            </div>
         </div>
     </section>
     <section class="mainSearchContent">
-
+        <div class="mainSearchResult" ng-repeat="data in result.RelatedTopics">
+            <div class="resultBody">
+                <div class="resultHeader" ng-bind-html="data.Result"></div>
+                <div class="resultContent" ng-bind="data.Text"></div>
+                <a class="resultSub" href="data.FirstURL" ng-bind-html="data.FirstURL"></a>
+            </div>
+        </div>
     </section>
 </section>

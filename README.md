@@ -1,20 +1,6 @@
-# About
-
-This is a fork of [Angular Seed](https://github.com/angular/angular-seed) but with full RequireJS support.
-
-* AngularJS 1.3.x (1.4.x might work)
-* RequireJS 2.1.x
-* Full support for unit tests using Karma
-* Full support for e2e tests using Protractor
-
-## Changes & Notes
-
-* Removed `index-async.html` and all the related logic & tasks. Original seed project offers a way to asynchroneusly load initial set of js files using a custom loader.
-* Bootstraping file (`require-config.js`) is used for both unit testing and bootstraping on the actual page. If you don't plan to build your sources using `r.js`, you should consider removing logic related to Karma before using this file in production. 
-
 ## Installation
 
-    git clone git@github.com:tnajdek/angular-requirejs-seed.git
+    git clone https://github.com/lordachyut/indixBBG.git
     cd angular-requirejs-seed
     npm install
 

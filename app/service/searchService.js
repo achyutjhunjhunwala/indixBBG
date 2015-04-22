@@ -25,4 +25,21 @@ define(['angular'],function(angular) {
             };
             return searchAPI;
         }])
+        .factory('RelatedDataService', ['$q', '$http', function ($q, $http) {
+            var rdAPI = {
+                fetch: function (searchText) {
+                    var deferred = $q.defer();
+                    $http({
+                        url: "mock_data/relatedData.json",
+                        method: "GET"
+                    }).success(function (response) {
+                        deferred.resolve(response);
+                    }).error(function (error) {
+                        deferred.reject(error);
+                    });
+                    return deferred.promise;
+                }
+            };
+            return rdAPI;
+        }])
     });
