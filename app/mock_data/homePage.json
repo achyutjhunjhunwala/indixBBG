@@ -1,0 +1,26 @@
+[
+  {
+    "planName" :"Light",
+    "planSub" : "Great for Small Business",
+    "amount" : "$5",
+    "timeSpan" : "Monthly",
+    "techData" : ["24/7 Tech Support","Advanced Options","100GB Storage","1 GB Bandwidth"],
+    "bonus" : "Upto 1 Million Searches"
+  },
+  {
+    "planName" :"Run",
+    "planSub" : "Great for Small Business",
+    "amount" : "$5",
+    "timeSpan" : "Monthly",
+    "techData" : ["24/7 Tech Support","Advanced Options","100GB Storage","1 GB Bandwidth"],
+    "bonus" : "Upto 5 Million Searches"
+  },
+  {
+    "planName" :"Fly",
+    "planSub" : "Great for Small Business",
+    "amount" : "$5",
+    "timeSpan" : "Monthly",
+    "techData" : ["24/7 Tech Support","Advanced Options","100GB Storage","1 GB Bandwidth"],
+    "bonus" : "Unlimited Searches"
+  }
+]

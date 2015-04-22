@@ -42,4 +42,21 @@ define(['angular'],function(angular) {
             };
             return rdAPI;
         }])
+        .factory('HomePageMockService', ['$q', '$http', function ($q, $http) {
+            var hpmAPI = {
+                fetch: function (searchText) {
+                    var deferred = $q.defer();
+                    $http({
+                        url: "mock_data/homePage.json",
+                        method: "GET"
+                    }).success(function (response) {
+                        deferred.resolve(response);
+                    }).error(function (error) {
+                        deferred.reject(error);
+                    });
+                    return deferred.promise;
+                }
+            };
+            return hpmAPI;
+        }])
     });
