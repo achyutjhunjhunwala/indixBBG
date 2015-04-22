@@ -33,7 +33,7 @@
     display: none;
 }
 
-/*View CSS*/
+/*HomeView CSS*/
 .wrapper {
   margin: 0 auto;
   width: 800px;
@@ -51,6 +51,8 @@
 
 .buckLogoText {
   text-align: center;
+  font-size: 2.5em;
+  color: grey;
 }
 
 .mainSearch {
@@ -58,7 +60,7 @@
 }
 
 .searchBuck {
-
+  width: 50%;
 }
 
 .searchBorder {
@@ -67,12 +69,14 @@
 }
 
 .searchBox {
-  margin-left: 315px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .pricingHeader {
   margin: 0 auto;
-  width: 25%;
+  text-align: center;
+  color: grey;
 }
 
 .pricingPlan {
@@ -80,11 +84,11 @@
 }
 
 .plans {
-  width: 120%;
+  width: 100%;
   margin: 0 auto;
 }
 .actualPlans {
-  width: 25%;
+  width: 30%;
   float: left;
   margin: 10px;
   box-shadow: 0px 2px 2px #888888;
@@ -99,9 +103,10 @@
 }
 
 .planHeader {
-  background-color: orangered;
+  background-color: #FF6600;
   height: 80px;
   color: white;
+  font-weight: bold;
 }
 
 .planName {
@@ -122,10 +127,32 @@
   background-color: lightgoldenrodyellow;
   height: 100px;
   width: 100%;
+  color: #CC9900;
 }
 
 .techDetails {
   height: 130px;
+}
+
+.amount {
+  width: 55%;
+  text-align: right;
+  float: left;
+  margin-top: 25px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.timeSpan {
+  font-size: 0.5em;
+}
+
+.joinLogo {
+  float: right;
+  margin-top: 25px;
+}
+
+.actualPlans:nth-child(2n+1) .planPrice #flag {
+  background: linear-gradient(to bottom, rgba(164,179,87,1) 0%, rgba(164,179,87,1) 3%, rgba(9,161,32,1) 100%);
 }
 
 .techData {
@@ -143,22 +170,13 @@
   margin-bottom: 30px;
 }
 
-.amount {
-  width: 55%;
-  text-align: right;
-  float: left;
-}
-
-.joinLogo {
-  float: left;
-}
 
 #flag {
-  width: 80px;
-  height: 38px;
+  width: 70px;
+  height: 20px;
   padding-top: 15px;
   position: relative;
-  background: red;
+  background: #FF6600;
   color: white;
   font-size: 11px;
   letter-spacing: 0.2em;
@@ -172,7 +190,101 @@
   bottom: 0;
   width: 0;
   height: 0;
-  border-left: 20px solid lightgoldenrodyellow;
-  border-top: 27px solid transparent;
-  border-bottom: 27px solid transparent;
+  border-left: 17px solid lightgoldenrodyellow;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent
+}
+
+/*SearchView CSS*/
+
+.search-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.headerWrap {
+  margin-top: 15px;
+}
+.searchheader {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.specialSearchContentWrap {
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  margin-top: 7px;
+  visibility: visible;
+  overflow: visible;
+  max-height: none;
+  display: block;
+  background-color: #f2f2f2;
+}
+
+.specialContent {
+  width: 67%;
+
+}
+.relatedTopics {
+  width: 30%;
+}
+.scImage {
+  min-width: 1px;
+  max-width: 180px;
+  max-height: 120px;
+  display: inline;
+  vertical-align: middle;
+  position: relative;
+}
+.specialContentInnerWrap{
+  width: 100%;
+  margin: 0 auto;
+  max-width: 44em;
+}
+
+.specialCotentImage {
+  width: 30%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: table-cell;
+  vertical-align: top;
+  height: 120px;
+  line-height: 120px;
+  max-width: 180px;
+  margin-left: 0;
+  margin-right: 0;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
+.specialContentText {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 2em;
+  overflow: visible;
+}
+
+.specialContentText h1 {
+  font-size: 1.5em;
+}
+
+.generalgrey {
+  color: grey;
+}
+
+.linkContainer {
+  margin-top: 20px;
+}
+.specialContentLink {
+  padding-right: 10px;
+  float: left;
+  padding-left: 10px;
+  border-right: 1px dotted grey;
+}
+.specialContentLink a {
+  color: grey;
+  text-decoration: none;
 }

@@ -1,0 +1,44 @@
+<section class="search-wrapper">
+    <section class="headerWrap">
+        <div class="searchheader">
+            <input class="searchBuck" type="text" ng-model="searchTerm" placeholder="Search" ng-keypress="searchPress($event)"/>
+        </div>
+    </section>
+    <section class="specialSearchContentWrap">
+        <div class="specialContent">
+            <div class="specialContentInnerWrap">
+                <div class="specialCotentImage">
+                    <img src="{{result.RelatedTopics[0].Icon.URL}}" alt="" class="scImage"/>
+                </div>
+                <div class="specialContentText">
+                    <h1>{{result.Heading}}</h1>
+                    <div class="generalgrey">{{result.RelatedTopics[0].Text}}</div>
+                    <div class="linkContainer">
+                        <div class="specialContentLink">
+                            <a href="">
+                                <span>Show More</span>
+                            </a>
+                        </div>
+                        <div class="specialContentLink">
+                            <a href="">
+                                <span>More at Wikipedia</span>
+                            </a>
+                        </div>
+                        <div class="specialContentLink">
+                            <a href="">
+                                <span>encrypted.google.com</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="relatedTopics">
+
+        </div>
+    </section>
+    <section class="mainSearchContent">
+
+    </section>
+</section>

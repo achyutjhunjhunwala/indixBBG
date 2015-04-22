@@ -2,11 +2,11 @@
 'use strict';
 
 define(['app', 'angularMocks'], function(app) {
-	describe('myApp.view2 module', function() {
+	describe('myApp.search module', function() {
 
-		beforeEach(module('myApp.view2'));
+		beforeEach(module('myApp.search'));
 
-		describe('view2 controller', function(){
+		describe('search controller', function(){
 
 			it('should ....', inject(function($controller) {
 			//spec body
